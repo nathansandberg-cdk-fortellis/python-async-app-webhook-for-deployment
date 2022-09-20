@@ -50,7 +50,7 @@ class Event(Resource):
             json.dump(file_data, file, indent = 2)
         return ('', 202)
 
-api.add_resource(Event, '/hello/world/event')
+api.add_resource(Event, '/event/hello/world')
 
 class Queue(Resource):
     def get(self):
@@ -59,7 +59,7 @@ class Queue(Resource):
             
         return file_data
 
-api.add_resource(Queue, '/hello/world')
+api.add_resource(Queue, '/event/hello/world')
 
 if __name__ == '__main__':
     app.run(debug=True)
